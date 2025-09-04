@@ -3,8 +3,6 @@ package main
 import (
 	"log"
 	"os"
-	"telegram-weather-bot/clients/openWeather"
-	"telegram-weather-bot/handler"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/joho/godotenv"
@@ -24,10 +22,6 @@ func main() {
 	bot.Debug = true
 
 	log.Printf("Authorized on account %s", bot.Self.UserName)
-
-	owClient := openWeather.New(os.Getenv("OPENWEATHER_KEY"))
-
-	botHandler := handler.New(bot, owClient)
 
 	botHandler.Start()
 }
