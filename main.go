@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"os"
-	"telegram-weather-bot/clients/openweather"
+	"telegram-weather-bot/clients/openWeather"
 	"telegram-weather-bot/handler"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
@@ -25,7 +25,7 @@ func main() {
 
 	log.Printf("Authorized on account %s", bot.Self.UserName)
 
-	owClient := openweather.New(os.Getenv("OPENWEATHER_KEY"))
+	owClient := openWeather.New(os.Getenv("OPENWEATHER_KEY"))
 
 	botHandler := handler.New(bot, owClient)
 

@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"log"
 	"math"
-	"telegram-weather-bot/clients/openweather"
+	"telegram-weather-bot/clients/openWeather"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 type Handler struct {
 	bot      *tgbotapi.BotAPI
-	owClient *openweather.OpenWeatherClient
+	owClient *openWeather.OpenWeatherClient
 }
 
-func New(bot *tgbotapi.BotAPI, owClient *openweather.OpenWeatherClient) *Handler {
+func New(bot *tgbotapi.BotAPI, owClient *openWeather.OpenWeatherClient) *Handler {
 	return &Handler{
 		bot:      bot,
 		owClient: owClient,

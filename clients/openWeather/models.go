@@ -1,4 +1,4 @@
-package openweather
+package openWeather
 
 type CoordinatesResponse struct {
 	Name string  `json:"name"`
